@@ -16,7 +16,7 @@ def test_presidents(president):
     rsp_data = resp.json()
     topics_list = []
     for topic in rsp_data["RelatedTopics"]:
-        topics_list.append(topic["FirstURL"])
+        topics_list.append(topic["Text"])
     if any(president in string for string in topics_list):
         assert True
     else:
